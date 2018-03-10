@@ -1,0 +1,30 @@
+{% load staticfiles %}
+
+<html>
+    <head>
+        <title>Yiying's Game Web</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" type="text/css" href="{% static 'games/css/base.css' %}" />
+
+        <meta charset="UTF-8">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react-dom.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.21.1/babel.min.js"></script>
+
+    </head>
+     <body>
+        <div class="page-header">
+            <h1>Yiying's Game Web</h1>
+        </div>
+        <div class="content container">
+            <div class="row">
+                <div class="col-md-8">
+                {% block content %}
+                {% endblock %}
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

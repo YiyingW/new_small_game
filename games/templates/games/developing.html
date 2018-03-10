@@ -1,0 +1,8 @@
+{% extends 'games/base.html' %}
+
+{% block content %}
+	<h1>This game is still under development</h1>
+	<form>
+		<input class="btn" value="Back to Menu" onclick="window.location.href='{% url 'games:index' %}'" />
+	</form>
+{% endblock %}

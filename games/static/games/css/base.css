@@ -1,0 +1,89 @@
+body {
+  background-color: maroon;
+	background-image: url("../images/background.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+  background-position: 80% 50%;  
+  background-size: cover;
+}
+h1 {
+	color: yellow;
+}
+
+
+.home_button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: gray;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+  margin:10px;
+}
+
+.home_button:hover {background-color: #3e8e41}
+
+.home_button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.button {
+    background-color: #008CBA; /* Blue */
+    border: 1px solid gray;
+    color: white;
+    border-radius: 12px;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    width: 100px;
+}
+.button:hover {
+    background-color: #4CAF50; /* Green */
+}
+
+.btn {
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  text-shadow: 1px 1px 3px #666666;
+  font-family: Georgia;
+  color: #99653d;
+  font-size: 20px;
+  background: #ebe532;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #5ffc3c;
+  text-decoration: none;
+}
+
+.restart_button {
+  -webkit-border-radius: 10;
+  -moz-border-radius: 10;
+  border-radius: 10px;
+  font-family: Arial;
+  color: #0f0e0c;
+  font-size: 20px;
+  background: #eb3446;
+  padding: 4px 4px 4px 4px;
+  border: solid #000000 2px;
+  text-decoration: none;
+}
+
+.highlight {
+  background-color: lightblue;
+  width: 200px;
+  opacity: 0.78;
+}

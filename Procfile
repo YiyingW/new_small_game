@@ -1,0 +1,1 @@
+web: gunicorn yiying.wsgi --log-file -
