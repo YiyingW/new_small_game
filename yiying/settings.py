@@ -25,7 +25,7 @@ SECRET_KEY = '&x5es!n+k1u))o6(q47b75thzgq%-8e)-cc&eu5a0bq4kouig4'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["yw-games.herokuapp.com"]
 
 
 # Application definition
