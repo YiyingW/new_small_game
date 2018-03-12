@@ -1,7 +1,7 @@
 function Cell(props){
 	return (
 		<div>
-			<a className="home_button" href={props.game_id}>{props.game_name}</a>
+			<a className="btn" href={props.game_id}>{props.game_name}</a>
 		</div>
 	)
 }

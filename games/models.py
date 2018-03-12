@@ -10,5 +10,5 @@ class History(models.Model):
     player_name = models.CharField(max_length=200)
     game_name = models.CharField(max_length=200)
     comment = models.TextField()
-    palyed_time = models.DateTimeField('time played')
+    played_time = models.DateTimeField('time played')
 

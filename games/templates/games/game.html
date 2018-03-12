@@ -1,0 +1,33 @@
+{% extends 'games/base.html' %}
+
+{% block content %}
+	<body>
+         <div id="root"></div>
+         <script>
+         	var game_page = '../../static/games/js/game_' + {{ game_id }} +'.jsx'
+         	document.write("<scr" + "ipt type='text/jsx' src=" + game_page + "></sc" + "ript>");
+         </script>
+     </body>
+	<form>
+		<input class="btn" value="Back to Menu" onclick="window.location.href='{% url 'games:index' %}'" />
+	</form>
+
+{% endblock %}
+
+{% block forms %}
+	<div>
+	  <form method="post">
+	    {% csrf_token %}
+	    <div class="form-group">
+	      <label for="id_player_name" style="color:yellow; font-weight: bold; font-size:20;">Name</label>
+	      <input type="text" class="form-control" id="id_player_name" name="player_name">
+	    </div>
+	    <div class="form-group">
+	      <label for="id_comment" style="color:yellow; font-weight: bold; font-size:20;">Comment</label>
+	      <textarea class="form-control" id="id_comment" name="comment" rows="5"></textarea>
+	    </div>
+	    <button type="submit" class="btn btn-success">Post</button>
+	  </form>
+	</div>
+{% endblock %}
+
