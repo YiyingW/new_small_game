@@ -3,9 +3,11 @@
 {% block content %}
 	<body>
          <div id="root"></div>
-         <script src="../../static/games/js/game_0.jsx"  type="text/jsx"></script>
+         <script>
+         	var game_page = '../../static/games/js/game_' + {{ game_id }} +'.jsx'
+         	document.write("<scr" + "ipt type='text/jsx' src=" + game_page + "></sc" + "ript>");
+         </script>
      </body>
-
 	<form>
 		<input class="btn" value="Back to Menu" onclick="window.location.href='{% url 'games:index' %}'" />
 	</form>
@@ -26,3 +28,4 @@
     <button type="submit" class="btn btn-success">Post</button>
   </form>
 {% endblock %}
+
