@@ -1,0 +1,50 @@
+{% extends 'games/base.html' %}
+
+
+{% block summary %}
+<style>
+	table {
+	    border-collapse: collapse;
+	    background-color: yellow;
+        width:100%;
+        margin-right:auto;
+        margin-left:auto;
+	}
+
+	th, td {
+	    text-align: center;
+	    padding: 8px;
+	}
+	th {
+		background-color: lightblue;
+	}
+	tr:nth-child(even){background-color: #f2f2f2}
+</style>
+<div class="container" style="width:90%;">
+  <table class="table">
+    <thead class="thead-inverse">
+      <tr>
+        <th>Player Name</th>
+        <th>Game Name</th>
+        <th>Comments</th>
+        <th>Played Time</th>
+      </tr>
+    </thead>
+    <tbody>
+    	{% for record in records %}
+    		<tr>
+    			<td>{{ record.player_name }}</td>
+    			<td>{{ record.game_name }}</td>
+    			<td>{{ record.comment }}</td>
+    			<td>{{ record.played_time }}</td>
+    		</tr>
+    	{% endfor %}
+    </tbody>
+  </table>
+  <form>
+    <input class="btn" value="Back to Menu" onclick="window.location.href='{% url 'games:index' %}'" />
+  </form>
+ </div>
+
+
+{% endblock %}

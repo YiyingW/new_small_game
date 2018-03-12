@@ -22,6 +22,7 @@ from games import views
 urlpatterns = [
     url(r'^$', include('games.urls')),
     url(r'^(?P<game_id>[0-9]+)/$', views.detail, name='detail'),
+    url(r'^summary/$', views.summary, name='summary'),
     url('admin/', admin.site.urls),
     
 ]
