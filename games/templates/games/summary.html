@@ -41,9 +41,9 @@
     	{% endfor %}
     </tbody>
   </table>
-  <form>
-    <input class="btn" value="Back to Menu" onclick="window.location.href='{% url 'games:index' %}'" />
-  </form>
+  <div class="mb-4" style="padding-top: 100px;">
+    <a href="{% url 'games:index' %}" class="btn btn-primary">Back to Menu</a>
+  </div>
  </div>
 
 
