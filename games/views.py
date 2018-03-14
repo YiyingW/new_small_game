@@ -4,6 +4,8 @@ from django.urls import reverse
 from .forms import GameForm
 from .models import History
 from datetime import datetime
+import requests
+from config import api_key
 
 # Create your views here.
 def index(request):
@@ -14,6 +16,16 @@ def detail(request, game_id):
     if request.method == "GET":
         if game_id == '0' or game_id == '1':
             return render(request, 'games/game.html', {"game_id": game_id})
+        elif game_id == '2':
+            response = requests.get('http://freegeoip.net/json/')
+            geodata = response.json()
+            return render(request, 'games/map.html', {
+                'time zone': geodata['time_zone'],
+                'country': geodata['country_name'],
+                'latitude': geodata['latitude'],
+                'longitude': geodata['longitude'],
+                'api_key': api_key
+            })
         else:
             return render(request, 'games/developing.html', {})
     elif request.method == "POST":
