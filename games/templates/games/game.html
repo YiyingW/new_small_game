@@ -2,15 +2,16 @@
 
 {% block content %}
 	<body>
-         <div id="root"></div>
-         <script>
-         	var game_page = '../../static/games/js/game_' + {{ game_id }} +'.jsx'
-         	document.write("<scr" + "ipt type='text/jsx' src=" + game_page + "></sc" + "ript>");
-         </script>
-     </body>
-	<form>
-		<input class="btn" value="Back to Menu" onclick="window.location.href='{% url 'games:index' %}'" />
-	</form>
+         <div id="root">
+	         <script>
+	         	var game_page = '../../static/games/js/game_' + {{ game_id }} +'.jsx'
+	         	document.write("<scr" + "ipt type='text/jsx' src=" + game_page + "></sc" + "ript>");
+	         </script>
+         </div> 
+		<div class="mb-4" style="padding-top: 80px;">
+			<a href="{% url 'games:index' %}" class="btn btn-primary">Back to Menu</a>
+		</div>
+	</body>
 
 {% endblock %}
 
@@ -18,6 +19,7 @@
 	<div>
 	  <form method="post">
 	    {% csrf_token %}
+	    {{ form.as_p }}
 	    <div class="form-group">
 	      <label for="id_player_name" style="color:yellow; font-weight: bold; font-size:20;">Name</label>
 	      <input type="text" class="form-control" id="id_player_name" name="player_name">

@@ -175,9 +175,11 @@ class Game extends React.Component{
   render(){
     return (
       <div>
-        <h1>{this.state.winner > 0? this.state.winner == 1? "Black Wins": "Red Wins" : this.state.player? "Blacks Turn" : "Red Turn"}</h1>
-        <Board cells = {this.state.cells} handleClick = {this.handleClick}/>
-        <button className = "restart_button" onClick = {()=> this.restart()}>Restart</button>
+        <div>
+          <h1>{this.state.winner > 0? this.state.winner == 1? "Black Wins": "Red Wins" : this.state.player? "Blacks Turn" : "Red Turn"}</h1>
+          <Board cells = {this.state.cells} handleClick = {this.handleClick}/>
+        </div>
+        <button className="restart_button" onClick = {()=> this.restart()}>Restart</button>
       </div>
     )
   }

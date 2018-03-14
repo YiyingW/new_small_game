@@ -1,11 +1,13 @@
 {% extends 'games/base.html' %}
 
-{% block content %}
+{% block index %}
+
 	<body>
          <div id="root"></div>
          <script src="../../static/games/js/homepage.jsx"  type="text/jsx"></script>
      </body>
-	<form style="padding-top: 100px;">
-		<input class="btn" value="User Comments" onclick="window.location.href='{% url 'summary' %}'" />
-	</form>
+	<div class="mb-4" style="padding-top: 80px;">
+		<a href="{% url 'summary' %}" class="btn btn-primary">User Comments</a>
+	</div>
+
 {% endblock %}
