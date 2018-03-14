@@ -5,7 +5,6 @@ from .forms import GameForm
 from .models import History
 from datetime import datetime
 import requests
-from config import api_key
 
 # Create your views here.
 def index(request):
@@ -24,7 +23,7 @@ def detail(request, game_id):
                 'country': geodata['country_name'],
                 'latitude': geodata['latitude'],
                 'longitude': geodata['longitude'],
-                'api_key': api_key
+                'api_key': "AIzaSyDJDxy3ex0Y0FByMHmmMEOp5lI0FWmUZvY"
             })
         else:
             return render(request, 'games/developing.html', {})
