@@ -1,13 +1,36 @@
 {% extends 'games/base.html' %}
+{% load staticfiles %}
 
 {% block index %}
+<!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+<body>
+    <div class="container marketing">
 
-	<body>
-         <div id="root"></div>
-         <script src="../../static/games/js/homepage.jsx"  type="text/jsx"></script>
-     </body>
-	<div class="mb-4" style="padding-top: 80px;">
-		<a href="{% url 'summary' %}" class="btn btn-primary">User Comments</a>
-	</div>
+      <!-- Three columns of text below the carousel -->
+      <div class="row">
+        <div class="col-lg-4">
+          <img class="img-circle" src="{% static 'games/images/connect-4-game.jpg' %}" alt="Generic placeholder image" width="140" height="140">
+          <h2>Connect4Game</h2>
+          <p>This game is centuries old, Captain James Cook used to play it with his fellow officers on his long voyages, and so it has also been called "Captain's Mistress". Milton Bradley (now owned by Hasbro) published a version of this game called "Connect Four" in 1974.</p>
+          <p><a class="btn btn-default" href="0" role="button">View details &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <img class="img-circle" src="{% static 'games/images/number-game.jpg' %}" alt="Generic placeholder image" width="140" height="140">
+          <h2>Number Game</h2>
+          <p>Math is wholly unhindered and remarkably unaffected by language, race, religion or other cultural factors. It is an incredible, universal language of concepts that can be taught and understood regardless of where you are or what you believe.</p>
+          <p><a class="btn btn-default" href="1" role="button">View details &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <img class="img-circle" src="{% static 'games/images/map-game.jpg' %}" alt="Generic placeholder image" width="140" height="140">
+          <h2>Where are you</h2>
+          <p>Perhaps to lose a sense of where you are implies the danger of losing a sense of who you are. I thought—to lose your direction is to lose your face. So here he comes to ask his direction from the lost, the invisible. Very well, I’ve learned to live without direction.</p>
+          <p><a class="btn btn-default" href="2" role="button">View details &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+      </div><!-- /.row -->
 
+     </div>
+</body>
+    
 {% endblock %}
