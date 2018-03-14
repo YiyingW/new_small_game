@@ -104,7 +104,7 @@ class Game extends React.Component{
   render(){
     return (
       <div>
-        <h2 style={{color:"yellow"}}>Question: {this.state.question} ?</h2>
+        <h2 style={{color:"black"}}>Question: {this.state.question} ?</h2>
         <Board options = {this.state.options} handleClick = {this.handleClick}/>
         <div className="highlight">
           <h2 style={{color:"green"}}> Correct: {this.state.c_count} </h2>
