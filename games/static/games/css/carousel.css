@@ -7,42 +7,38 @@ body {
   color: #5a5a5a;
   background-color: lightblue;
 }
+header {
+  text-align: center;
+  background: url('../images/background3.jpg');
+  background-size: cover;
+  overflow: hidden;
+  padding-top:100px;
+}
 
 .img-circle {
   width: 280px;
   height: 280px;
-  transition: all .5s;
+  transition: all 1s;
 }
 
 .img-circle:hover {
-  transform: scale(1.5) rotate(360deg);
+  transform: scale(1.2) rotate(360deg);
 }
+
+.color-me1{
+    color:yellow;
+    font-size: 2em;
+}
+
+.color-me2{
+    color:yellow;
+    font-size: 1.3em;
+    text-align: right;
+}
+
 
 /* CUSTOMIZE THE NAVBAR
 -------------------------------------------------- */
-
-/* Special class on .container surrounding .navbar, used for positioning it into place. */
-.navbar-wrapper {
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: 20;
-}
-
-/* Flip around the padding for proper display in narrow viewports */
-.navbar-wrapper > .container {
-  padding-right: 0;
-  padding-left: 0;
-}
-.navbar-wrapper .navbar {
-  padding-right: 15px;
-  padding-left: 15px;
-}
-.navbar-wrapper .navbar .container {
-  width: auto;
-}
-
 
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
@@ -76,7 +72,7 @@ body {
 
 /* Center align the text within the three columns below the carousel */
 .marketing .col-lg-4 {
-  margin-top: 100px;
+  margin-top: 50px;
   margin-bottom: 20px;
   text-align: center;
 }
@@ -104,7 +100,7 @@ body {
 }
 
 #game {
-  padding-top: 100px;
+  padding-top: 50px;
   display:flex;
   align-items: center;
   justify-content:center;
@@ -144,10 +140,11 @@ body {
 /* RESPONSIVE CSS
 -------------------------------------------------- */
 
-@media (min-width: 768px) {
+@media (min-width: 1200px) {
   /* Navbar positioning foo */
   .navbar-wrapper {
     margin-top: 20px;
+    margin-left: 100px;
   }
   .navbar-wrapper .container {
     padding-right: 15px;
