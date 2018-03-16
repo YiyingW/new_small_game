@@ -8,6 +8,15 @@ body {
   background-color: lightblue;
 }
 
+.img-circle {
+  width: 280px;
+  height: 280px;
+  transition: all .5s;
+}
+
+.img-circle:hover {
+  transform: scale(1.5) rotate(360deg);
+}
 
 /* CUSTOMIZE THE NAVBAR
 -------------------------------------------------- */
